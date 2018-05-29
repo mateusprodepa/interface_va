@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Verificação de ambientes - PRODEPA</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="box"><h1 class="navbar__header">Verificação de Ambientes</h1></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+        <div class="box box6"></div>
+      </div>
+      <ul class="navbar__list">
+        <li class="navbar__list__item"><a href="#sisp">SISP</a></li>
+        <li class="navbar__list__item"><a href="#obras">OBRAS</a></li>
+      </ul>
+    </nav>
+    <div class="warn">
+      <span>Selecione um dos sistemas acima para verificar o status de operação.</span>
+    </div>
+
+    <main>
+      <div class="testeBox" id="sisp">
+        <ul class="testeBox__list">
+          <li class="testeBox__list__item"><span>Verificar variáveis de ambiente(dados de WS internos e externos) <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar permissões de pastas <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar se módulos APACHE necessários estão instalados <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar se módulos PHP necessários estão instalados <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar instalação do REDIS e PREDIS <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar se arquivos JSON estão gerados e com conteúdo <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar se dados PREDIS estão gerados e com conteúdo <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar se dados APC estão gerados e com conteúdo <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Testar conexão com BD via WS <i class="fas fa-check-circle"></i></span></span></li>
+        </ul>
+        <div class="dadosSistema">
+          <h1 class="dadosSistema__nome">SISP 2</h1>
+          <button class="dadosSistema__button">Testar ambiente</button>
+        </div>
+      </div>
+
+      <div class="testeBox" id="obras">
+        <div class="dadosSistema">
+          <h1 class="dadosSistema__nome">OBRAS PARÁ</h1>
+          <button class="dadosSistema__button">Testar ambiente</button>
+        </div>
+        <ul class="testeBox__list">
+          <li class="testeBox__list__item"><span>Verificar variáveis de ambiente <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar permissões de pastas <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Verificar se módulos PHP necessários estão instalados <i class="fas fa-check-circle"></i></span></li>
+          <li class="testeBox__list__item"><span>Testar conexão com BD <i class="fas fa-check-circle"></i></span></span></li>
+        </ul>
+      </div>
+
+    </main>
+
+    <footer id="footer">
+      <h5>Copyright © Prodepa, todos direitos reservados.</h5>
+    </footer>
+  </body>
+</html>
