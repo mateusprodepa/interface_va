@@ -1,14 +1,38 @@
+let t = new Array();
+const wrapper = document.querySelector('.wrapper');
+const testeBox = document.querySelectorAll('.testeBox');
+
 function generateBoxes() {
-  const c = Math.floor(Math.random() * (21 - 10) + 10);
+  const c = Math.floor(Math.random() * (18 - 10) + 10);
   let boxes;
 
   boxes = new Array(c);
   for(var x = 0; x < boxes.length; x++) {
     const n = Math.floor(Math.random() * (7 - 2) + 2);
-    const top = Math.floor(Math.random() * window.getComputedStyle(document.querySelector('.wrapper', null)).getPropertyValue('height').match(/\d*/gi)[0]) - 70;
-    const left = Math.floor(Math.random() * window.getComputedStyle(document.querySelector('.wrapper', null)).getPropertyValue('width').match(/\d*/gi)[0]) + 150;
-    document.querySelector('.wrapper').innerHTML += `<div style="top: ${top}px !important; left: ${left}px !important;" class='box box${n}'></div>`;
+    const top = Math.floor(Math.random() *
+    window.getComputedStyle(wrapper, null)
+    .getPropertyValue('height')
+    .match(/\d*/gi)[0]) - 70;
+
+    const left = Math.floor(Math.random() *
+    window.getComputedStyle(wrapper, null)
+    .getPropertyValue('width')
+    .match(/\d*/gi)[0]) + 150;
+
+    wrapper.innerHTML += `<div style="top: ${top}px; left: ${left}px;" class='box box${n}'></div>`;
   }
 }
+
+testeBox
+.forEach(teste => {
+  t.push(new Website(teste.dataset.name, teste.dataset.url, teste.dataset.func.split(' ')));
+});
+
+testeBox
+.forEach(teste => {
+  teste.addEventListener('click', () => {
+    t.find(tes => teste.dataset.name === tes.nome).testarModulos();
+  });
+});
 
 generateBoxes();
