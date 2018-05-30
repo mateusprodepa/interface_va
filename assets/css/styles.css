@@ -111,8 +111,8 @@ main {
   width: 70px;
   height: 70px;
   position: absolute;
-  top: 20px;
-  left: 270px;
+  /* top: 20px; */
+  /* left: 270px; */
   transform: rotate(45deg);
 }
 
@@ -120,8 +120,8 @@ main {
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 10px;
-  left: 430px;
+  /* top: 10px; */
+  /* left: 430px; */
   transform: rotate(75deg);
 }
 
@@ -129,8 +129,8 @@ main {
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 80px;
-  left: 365px;
+  /* top: 80px; */
+  /* left: 365px; */
   transform: rotate(-15deg);
 }
 
@@ -138,16 +138,24 @@ main {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: 100px;
-  left: 500px;
+  /* top: 100px; */
+  /* left: 500px; */
 }
 
 .box6 {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 80px;
-  left: 575px;
+  /* top: 80px; */
+  /* left: 575px; */
+}
+
+.box6 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  /* top: 80px; */
+  /* left: 575px; */
 }
 
 .wrapper {
@@ -192,6 +200,7 @@ main {
   border-image-slice: 1;
   box-shadow: 0 .5px 3px rgba(0, 119, 136, 0.2);
   box-sizing: border-box;
+  padding: 14px;
 }
 
 .testeBox__list {
