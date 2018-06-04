@@ -1,23 +1,30 @@
 class Website {
   constructor(nome, url, testes) {
     this.nome = nome;
-    this.testes = Object.assign({}, testes);
-    this.st = null;
+    this.testes = testes;
+    this.st = [];
     this.url = url;
-    this._ = this.testes.func;
-  }
+    this._ = [];
+    this.logs = document.querySelector(`#${this.nome}`).children[2];
+    this.loader = this.logs.children[0];
+    this.closeBtn = this.logs.children[1];
+    this.active = false;
 
-  testarAmbiente() {
-    testes.forEach(teste => {
-      this.testarModulo(this.url, this._);
-    });
+    this.closeBtn.addEventListener('click', () =>
+      this.logs.classList.remove('active'));
   }
 
   testarModulos() {
-    for(var i in this.testes) {
-      $.post(this.url, { function: this.testes[i] }, res => {
-        console.log(res);
-      });
-    }
+    this.st = [];
+    this.testes.forEach(teste =>
+      $.post(this.url, { function: teste }, res =>
+        this.st.push({ nome: teste, res })));
+
+    this._.push(this.st);
+    this.atualizarValores();
+  }
+
+  atualizarValores() {
+    this.logs.classList.add('active');
   }
 }

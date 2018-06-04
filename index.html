@@ -12,11 +12,6 @@
     <nav class="navbar">
       <div class="wrapper">
         <div class="box"><h1 class="navbar__header">Verificação de Ambientes</h1></div>
-        <!-- <div class="box box2"></div>
-        <div class="box box3"></div>
-        <div class="box box4"></div>
-        <div class="box box5"></div>
-        <div class="box box6"></div> -->
       </div>
       <ul class="navbar__list">
         <li class="navbar__list__item"><a href="#sisp">SISP</a></li>
@@ -28,7 +23,7 @@
     </div>
 
     <main>
-      <div class="testeBox" id="sisp" data-name="sisp2" data-url="" data-func="testarBanco testarModulos">
+      <div class="testeBox" id="sisp2">
         <ul class="testeBox__list">
           <li class="testeBox__list__item"><span>Verificar variáveis de ambiente(dados de WS internos e externos) <i class="fas fa-check-circle"></i></span></li>
           <li class="testeBox__list__item"><span>Verificar permissões de pastas <i class="fas fa-check-circle"></i></span></li>
@@ -42,11 +37,15 @@
         </ul>
         <div class="dadosSistema">
           <h1 class="dadosSistema__nome">SISP 2</h1>
-          <button class="dadosSistema__button">Testar ambiente</button>
+          <button class="dadosSistema__button" data-name="sisp2" data-url="" data-func="testarBanco testarModulos">Testar ambiente</button>
+        </div>
+        <div class="logs">
+          <div class="loader"></div>
+          <div class="closeBtn">&times;</div>
         </div>
       </div>
 
-      <div class="testeBox" id="obras" data-name="obras" data-url="" data-func="testarBanco testarModulos">
+      <div class="testeBox" id="obras">
         <ul class="testeBox__list">
           <li class="testeBox__list__item"><span>Verificar variáveis de ambiente <i class="fas fa-check-circle"></i></span></li>
           <li class="testeBox__list__item"><span>Verificar permissões de pastas <i class="fas fa-check-circle"></i></span></li>
@@ -55,7 +54,11 @@
         </ul>
         <div class="dadosSistema">
           <h1 class="dadosSistema__nome">OBRAS PARÁ</h1>
-          <button class="dadosSistema__button">Testar ambiente</button>
+          <button class="dadosSistema__button" data-name="obras" data-url="" data-func="testarBanco testarModulos">Testar ambiente</button>
+        </div>
+        <div class="logs">
+          <div class="loader"></div>
+          <div class="closeBtn">&times;</div>
         </div>
       </div>
 

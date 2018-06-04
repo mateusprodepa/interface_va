@@ -111,8 +111,6 @@ main {
   width: 70px;
   height: 70px;
   position: absolute;
-  /* top: 20px; */
-  /* left: 270px; */
   transform: rotate(45deg);
 }
 
@@ -120,8 +118,6 @@ main {
   width: 60px;
   height: 60px;
   position: absolute;
-  /* top: 10px; */
-  /* left: 430px; */
   transform: rotate(75deg);
 }
 
@@ -129,8 +125,6 @@ main {
   width: 60px;
   height: 60px;
   position: absolute;
-  /* top: 80px; */
-  /* left: 365px; */
   transform: rotate(-15deg);
 }
 
@@ -138,24 +132,18 @@ main {
   width: 50px;
   height: 50px;
   position: absolute;
-  /* top: 100px; */
-  /* left: 500px; */
 }
 
 .box6 {
   width: 40px;
   height: 40px;
   position: absolute;
-  /* top: 80px; */
-  /* left: 575px; */
 }
 
 .box6 {
   width: 20px;
   height: 20px;
   position: absolute;
-  /* top: 80px; */
-  /* left: 575px; */
 }
 
 .wrapper {
@@ -198,9 +186,11 @@ main {
   border-bottom: 8px solid transparent;
   border-image: linear-gradient(to right, #e67e22 0%, #994d00 50%, #664400 100%);
   border-image-slice: 1;
-  box-shadow: 0 .5px 3px rgba(0, 119, 136, 0.2);
+  box-shadow: 0 .5px 3px rgba(0, 119, 136, 0.4);
   box-sizing: border-box;
   padding: 14px;
+  transition: all .3s ease;
+  position: relative;
 }
 
 .testeBox__list {
@@ -215,6 +205,58 @@ main {
   padding: 4px;
   display: flex;
   text-align: justify;
+}
+
+.logs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  min-height: 100%;
+  width: 0;
+  background-color: #994d00;
+  font-family: "Work Sans";
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: none;
+  will-change: width;
+  transition: all .3s ease;
+  white-space: nowrap;
+  word-wrap: none;
+  box-shadow: 0 .5px 3px rgba(0, 119, 136, 0.4);
+}
+
+.active {
+  width: 50%;
+  background-color: #1e2328;
+}
+
+.loader {
+    border: 4px solid #e67e22; /* Light grey */
+    border-top: 4px solid #ffffff; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1.5s linear infinite;
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.closeBtn {
+  font-family: Helvetica;
+  font-weight: bolder;
+  font-size: 1.3rem;
+  color: #ffffff;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
 }
 
 .dadosSistema {

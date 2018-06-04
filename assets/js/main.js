@@ -1,6 +1,6 @@
 let t = new Array();
 const wrapper = document.querySelector('.wrapper');
-const testeBox = document.querySelectorAll('.testeBox');
+const dadosBtn = document.querySelectorAll('.dadosSistema__button');
 
 function generateBoxes() {
   const c = Math.floor(Math.random() * (18 - 10) + 10);
@@ -23,16 +23,17 @@ function generateBoxes() {
   }
 }
 
-testeBox
+dadosBtn
 .forEach(teste => {
   t.push(new Website(teste.dataset.name, teste.dataset.url, teste.dataset.func.split(' ')));
 });
 
-testeBox
+dadosBtn
 .forEach(teste => {
   teste.addEventListener('click', () => {
     t.find(tes => teste.dataset.name === tes.nome).testarModulos();
   });
 });
+
 
 generateBoxes();
