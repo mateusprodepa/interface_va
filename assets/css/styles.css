@@ -214,11 +214,11 @@ main {
   max-height: 100%;
   min-height: 100%;
   width: 0;
-  background-color: #994d00;
+  background-color: #131313;
   font-family: "Work Sans";
-  text-align: center;
+  text-align: left;
   overflow-y: auto;
-  overflow-x: none;
+  overflow-x: hidden;
   will-change: width;
   transition: all .3s ease;
   white-space: nowrap;
@@ -226,14 +226,29 @@ main {
   box-shadow: 0 .5px 3px rgba(0, 119, 136, 0.4);
 }
 
+.logs::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 25px;
+}
+
+.logs::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.logs::-webkit-scrollbar-thumb {
+  background-color: #004588;
+  outline: 1px solid rgb(33, 33, 33);
+}
+
 .active {
   width: 50%;
   background-color: #1e2328;
 }
 
-.loader {
-    border: 4px solid #e67e22; /* Light grey */
-    border-top: 4px solid #ffffff; /* Blue */
+.logs__loader {
+    border: 4px solid #e67e22;
+    border-top: 4px solid #ffffff;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -248,7 +263,7 @@ main {
     100% { transform: rotate(360deg); }
 }
 
-.closeBtn {
+.logs__closeBtn {
   font-family: Helvetica;
   font-weight: bolder;
   font-size: 1.3rem;
@@ -257,6 +272,19 @@ main {
   right: 20px;
   top: 10px;
   cursor: pointer;
+}
+
+.logs__result {
+  list-style: none;
+  padding: 14px 16px 14px 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 8px;
+}
+
+.logs__result li {
+  color: #ffffff;
+  font-size: 0.9rem;
 }
 
 .dadosSistema {
