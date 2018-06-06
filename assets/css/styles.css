@@ -15,6 +15,15 @@ main {
   padding: 32px;
 }
 
+.error-messages,
+.navbar__header,
+.navbar__list__item a,
+.warn span,
+#footer,
+.dadosSistema__button {
+  font-family: "Montserrat Alternates";
+}
+
 .navbar {
   width: 100%;
   margin: 0;
@@ -29,7 +38,6 @@ main {
 .navbar__header {
   margin: 0;
   padding: 0 0 0 5px;
-  font-family: "Montserrat Alternates";
   display: inline-block;
   position: absolute;
   top: 55%;
@@ -54,7 +62,6 @@ main {
 .navbar__list__item a {
   text-decoration: none;
   color: #FFF;
-  font-family: "Montserrat Alternates";
   text-transform: uppercase;
   position: relative;
   padding: 4px;
@@ -160,13 +167,11 @@ main {
 }
 
 .warn span {
-  font-family: "Montserrat Alternates";
   color: #f5f5f5;
 }
 
 #footer {
   background-color: #1e2328/*#e67e22*/;
-  font-family: "Montserrat Alternates";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,11 +222,11 @@ main {
   background-color: #131313;
   font-family: "Work Sans";
   text-align: left;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   will-change: width;
-  transition: all .3s ease;
   white-space: nowrap;
+  word-wrap: none;
+  transition: all .3s ease;
   word-wrap: none;
   box-shadow: 0 .5px 3px rgba(0, 119, 136, 0.4);
 }
@@ -237,25 +242,27 @@ main {
 }
 
 .logs::-webkit-scrollbar-thumb {
-  background-color: #004588;
+  background-color: #fa983a;
   outline: 1px solid rgb(33, 33, 33);
 }
 
 .active {
   width: 50%;
   background-color: #1e2328;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .logs__loader {
-    border: 4px solid #e67e22;
-    border-top: 4px solid #ffffff;
+    border: 2px solid #004588;
+    border-top: 2px solid #0066ff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1.5s linear infinite;
-    position: absolute;
-    top: calc(50% - 20px);
-    left: calc(50% - 20px);
+    width: 15px;
+    height: 15px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-left: 8px;
+    display: inline-block;
 }
 
 @keyframes spin {
@@ -280,6 +287,7 @@ main {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   margin: 8px;
+  margin-top: 16px;
 }
 
 .logs__result li {
@@ -305,7 +313,6 @@ main {
 
 .dadosSistema__button {
   padding: 14px;
-  font-family: "Montserrat Alternates";
   font-size: 1.3rem;
   background-color: #131313;
   color: #fff;
@@ -314,10 +321,11 @@ main {
   border-image-slice: 1;
   transition: all .4s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .dadosSistema__button:hover {
-  box-shadow: 0 0 10px #004588;
+  box-shadow: 0 0 15px #004588;
 }
 
 .dadosSistema__button:active {
@@ -327,4 +335,17 @@ main {
 
 .fa-check-circle {
   color: var(--verde);
+}
+
+.error-messages {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: linear-gradient(#e55039, #b71540);
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: all .3s ease-in-out;
+  transform: translateY(250%);
 }
