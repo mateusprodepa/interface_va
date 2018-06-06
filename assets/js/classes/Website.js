@@ -27,6 +27,8 @@ class Website {
         self.btn.removeAttribute('disabled');
         self.btn.innerHTML = 'Testar ambiente';
 
+        clearInterval(c);
+
         setTimeout(function() {
           document.querySelector('.error-messages').style.transform = 'translateY(210%)';
         }, 2000);
