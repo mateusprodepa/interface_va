@@ -16,15 +16,16 @@ class Website {
   }
 
   testarModulos() {
+    this.loader.style.display = "block";
     this.logs.classList.add('active');
     this.st = [];
     this.testes.forEach(teste =>
-      $.post(this.url, { function: teste }, res =>
-        this.st.push({ nome: teste, res })));
+      $.post(this.url, { function: teste }, res => {
+        this.st.push({ nome: teste, res });
+        this.st.length >= this.testes.length ? this.atualizarValores() : null;
+    }));
 
     this._.push(this.st);
-
-    this.atualizarValores();
   }
 
   atualizarValores() {
