@@ -31,7 +31,7 @@ class Website {
 
         setTimeout(function() {
           document.querySelector('.error-messages').style.transform = 'translateY(210%)';
-        }, 2000);
+        }, 3500);
       }
     }, 1000);
 

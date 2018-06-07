@@ -341,11 +341,11 @@ main {
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background: linear-gradient(#e55039, #b71540);
+  background: #b71540;
   color: #ffffff;
   text-transform: uppercase;
   padding: 16px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.06);
   transition: all .3s ease-in-out;
   transform: translateY(250%);
 }
