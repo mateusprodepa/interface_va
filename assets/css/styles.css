@@ -253,8 +253,8 @@ main {
 }
 
 .logs__loader {
-    border: 2px solid #004588;
-    border-top: 2px solid #0066ff;
+    border: 2px solid #fa983a;
+    border-top: 2px solid #9944ff;
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -316,7 +316,7 @@ main {
   background-color: #131313;
   color: #fff;
   border: 2px solid transparent;
-  border-image: linear-gradient(to bottom, #0066ff, #004588);
+  border-image: linear-gradient(to bottom, #fa983a, #9944ff);
   border-image-slice: 1;
   transition: all .4s ease;
   cursor: pointer;

@@ -28,14 +28,20 @@ function generateBoxes() {
 
 dadosBtn
 .forEach(btn => {
-  t.push(new Website(btn.dataset.name, btn.dataset.url, btn.dataset.func.split(' ')));
+  t.push(new Website(btn.dataset.name, btn.dataset.url, btn.dataset.func.split(' ')))
 });
 
 dadosBtn
 .forEach(btn => {
   btn.addEventListener('click', () => {
-    t.find(tes => btn.dataset.name === tes.nome).testarModulos();
+    t.find(tes => btn.dataset.name === tes.nome).testarModulos()
   });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  setInterval(() =>
+    t.forEach(t =>
+      t.testarModulos()), 15000)
+})
 
 generateBoxes();
